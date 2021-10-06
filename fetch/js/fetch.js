@@ -84,7 +84,7 @@ function loadGender(gender, userCount){
             temp = temp + fn + ln + phone + gdr + img
         }
         
-        resultDiv.innerHTML = temp
-
+        resultDiv.innerHTML = temp 
+  
     })
 }
