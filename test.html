@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+
+<script type="text/javascript">
+	demor()
+    function demor() 
+    { document.write("Function called123!!<br>")
+      return Promise.resolve(" Success 22");   //if not above sttmt will then run this sttmt
+//      or
+ //     return Promise.reject("Failure");
+    }
+	demor()
+    .then( (message) => {           //.then means will run this sttmt & show result at the end
+        document.write("Then success : " + message);
+      })
+
+
+</script>
+
+
+</body>
+</html> 

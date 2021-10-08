@@ -1,10 +1,10 @@
-function LoadUser(){
-    let url = "https://randomuser.me/api/"
+function LoadUser()
+{   let url = "https://randomuser.me/api/"
     
     fetch(url)
     .then((response) => response.json())
-    .then(data => {
-        let fn = document.getElementById("firstName")
+    .then(data => 
+    {   let fn = document.getElementById("firstName")
         let ln = document.getElementById("lastName")
         let phone = document.getElementById("phone")
         let img = document.getElementById("userImg")
