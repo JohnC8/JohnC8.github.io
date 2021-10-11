@@ -17,8 +17,29 @@ bookNowBtn.addEventListener("click", function(){
 })
 
 function BookNow(userName, userEmail, userPax, userRemarks){
-    console.log(userName)
-    console.log(userEmail)
-    console.log(userPax)
-    console.log(userRemarks)
+    let url = 'https://api.sheety.co/14b8f45507a042cf35d5be48ef8d40c9/bookingApp/bookings';
+    let body = {
+      booking: {
+        name: userName,
+        email: userEmail,
+        pax: userPax,
+        remarks: userRemarks,
+      }
+    }
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+          "Content-Type": "application/json"
+      }
+    })
+    .then((response) => response.json())
+    .then(json => {
+      // Do something with object
+      console.log(json.booking);
+    });
+ //   console.log(userName)
+//    console.log(userEmail)
+//    console.log(userPax)
+//console.log(userRemarks)
 }
